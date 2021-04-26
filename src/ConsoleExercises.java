@@ -34,7 +34,8 @@ public class ConsoleExercises {
 //        String userSentence = scanner.nextLine();
 //        System.out.printf("Your sentence: %s%n", userSentence);
 
-//        Bonus:
+//        Section 3:
+
 
         System.out.println("Enter classroom dimensions (L,W): ");
         float length = scanner.nextFloat();
@@ -43,5 +44,7 @@ public class ConsoleExercises {
         float perimeter = (2*length) + (2*width);
         System.out.printf("Area of room: %f sq ft%n", area);
         System.out.printf("Perimeter of room: %f ft%n", perimeter);
+
+
     }
 }
