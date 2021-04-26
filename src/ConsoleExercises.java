@@ -6,8 +6,8 @@ public class ConsoleExercises {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter an integer: ");
-        String userInput = scanner.next();
+        int userInput = scanner.nextInt();
 
-        System.out.println("You entered: --> \"" + userInput + "\" <--");
+        System.out.printf("You entered: %d%n", userInput);
     }
 }
