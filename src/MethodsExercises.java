@@ -44,12 +44,23 @@ public class MethodsExercises {
     //Number 3:
 
     public static void getFactorial(){
-        System.out.println("Enter a number between 1 and 10: ");
-        int userInput = getInteger(1, 10);
-        long factorial = 1;
-        for(int i = 1; i<userInput; i++){
-            factorial*=i;
-            System.out.println(userInput + "! = " + factorial);
+        while(true) {
+            System.out.println("Enter a number between 1 and 10: ");
+            int userInput = getInteger(1, 10);
+            long factorial = 1;
+            for (int i = 1; i <= userInput; i++) {
+                factorial *= i;
+                System.out.println(i + "! = " + factorial);
+            }
+            System.out.println("Continue? [y/n]");
+            Scanner scanner = new Scanner(System.in);
+            if (!(scanner.next().equalsIgnoreCase("y"))) {
+                break;
+            }
         }
     }
+
+    //Number 4:
+
+
 }
