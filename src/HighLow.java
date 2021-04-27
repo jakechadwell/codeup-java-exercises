@@ -10,17 +10,6 @@ public class HighLow {
         return (int) (Math.random() * range) + min;
     }
 
-    public static int validateInteger(int min, int max) {
-        Scanner scanner = new Scanner(System.in);
-        int userInput = scanner.nextInt();
-        if (min <= userInput && userInput <= max) {
-            return userInput;
-        } else {
-            System.out.println("Sorry, that number is not in the specified range, try again: ");
-            return validateInteger(min, max);
-        }
-    }
-
     public static void highLowGame(){
         int randomNumber = random(1, 100);
         Scanner scanner = new Scanner(System.in);
@@ -30,16 +19,11 @@ public class HighLow {
             guess = scanner.nextInt();
             if(guess<randomNumber){
                 System.out.println("HIGHER.");
-
             }else if(guess>randomNumber){
                 System.out.println("LOWER.");
-
             }else{
                 System.out.println("GOOD GUESS!");
-
             }
-
         }
     }
-
 }
