@@ -13,18 +13,18 @@ public class Bob {
 
             String userResponse = scanner.nextLine();
             if(userResponse.endsWith("?")){
-                System.out.println(question);
+                System.out.println("Bob: " + question);
             }else if(userResponse.endsWith("!")){
-                System.out.println(exclamation);
+                System.out.println("Bob: " + exclamation);
             }else if(userResponse.length()==0){
-                System.out.println(ignore);
+                System.out.println("Bob: " + ignore);
             }else{
-                System.out.println(defaultResponse);
+                System.out.println("Bob: " + defaultResponse);
             }
             System.out.println("Continue? [y/n]");
             String continuePrompt = scanner.nextLine();
             if(!continuePrompt.equalsIgnoreCase("y")){
-                System.out.println("See ya.");
+                System.out.println("Bob: See ya.");
                 break;
             }
         }while(true);
