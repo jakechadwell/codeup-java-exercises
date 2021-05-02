@@ -7,8 +7,8 @@ public class Input {
         System.out.println(prompt);
         return this.scanner.nextLine();
     }
-    public boolean yesNo(){
-        System.out.println("yes or no?: ");
+    public boolean yesNo(String prompt){
+        System.out.println(prompt);
         String input = scanner.next();
         return input.equalsIgnoreCase("y")||input.equalsIgnoreCase("yes");
     }
@@ -36,9 +36,8 @@ public class Input {
             return getDouble(min, max);
         }
     }
-    public double getDouble(){
-        System.out.println("Enter a double: ");
+    public double getDouble(String prompt){
+        System.out.println(prompt);
         return this.scanner.nextDouble();
     }
-
 }
