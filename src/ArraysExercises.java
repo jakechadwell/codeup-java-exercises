@@ -20,8 +20,9 @@ public class ArraysExercises {
             for (Person person : people) {
                 System.out.println(person.getName());
             }
-            addPerson(people, );
-            System.out.println(people[3].getName());
+            Person kelvon = new Person("Kelvon");
+            System.out.println("kelvon = " + kelvon.getName());addPerson(people, kelvon);
+            
         }
 
 }
