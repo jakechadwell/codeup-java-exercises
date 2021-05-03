@@ -29,7 +29,8 @@ public class ArraysLec_handout {
 
         //TODO: Build your first Java array! Feel free to use the array initializer or otherwise, but take time to make an array of your choosing and then test it out with a System.out.print of some kind to check an element within to satisfaction.
         //TODO Example: String[] myPets = new String[2]; myPets[0] = "Fluffy"; myPets[1] = "Spot"; OR: String[] myPets = {"Fluffy", "Spot"}. System.out.print(myPets[0]) // Fluffy
-
+    String[] myFriends = {"Adam", "Alexis", "Josh", "Jaxon"};
+        System.out.println("myFriends[0] = " + myFriends[0]);
         //~*~ Iterating Arrays ~*~
         //for + .length:
 
@@ -39,7 +40,9 @@ public class ArraysLec_handout {
         //TODO Together: Java also provides an enhanced for [for (ele : arr) {}] to use!
 
         //TODO: Using the array you set up above, practice iterating through the array using both of our types of for loops. When might you choose to use one over the other?
-
+    for(String friend : myFriends){
+        System.out.println("friend = " + friend);
+    }
         //~*~ Java array.methods() ~*~
         //We have access to a variety of pre-built static methods in the java.util.Arrays class
 
@@ -96,7 +99,8 @@ public class ArraysLec_handout {
         System.out.println("matrix[0][0] = " + matrix[0][0]); //row 1, col 1
 
         //TODO Interactive: Help me out here, if matrix[0][0] worked as demonstrated above, can you help me print out the "5" and "9"?
-
+        System.out.println("matrix[1][1] = " + matrix[1][1]);
+        System.out.println("matrix[2][2] = " + matrix[2][2]);
         //TODO: Emergency! Emergency! Alien invaders have been detected at int 6, int 7, and int 2 in our grid area! Dispatch our MIB forces to the appropriate parts of the array by finishing my System.outs!
 
         System.out.println();
@@ -104,9 +108,9 @@ public class ArraysLec_handout {
         System.out.println("|| ALIEN ACTIVITY DETECTED IN OUR GRID ||");
         System.out.println("** ALERT ** ALERT ** ALERT");
         System.out.println("Deploying MIB personnel to counter alien activity!");
-        // System.out.println("MIB Officer Douglas H. headed to grid area " + matrix[?][?] + "!"); //should say "grid area 6!"
-        // System.out.println("MIB Officer Larry C. headed to grid area " + matrix[?][?] + "!"); //should say "grid area 7!"
-        // System.out.println("MIB Officer Kenneth H. headed to grid area " + matrix[?][?] + "!"); //should say "grid area 2!"
+        System.out.println("MIB Officer Douglas H. headed to grid area " + matrix[1][2] + "!"); //should say "grid area 6!"
+         System.out.println("MIB Officer Larry C. headed to grid area " + matrix[2][0] + "!"); //should say "grid area 7!"
+         System.out.println("MIB Officer Kenneth H. headed to grid area " + matrix[0][1] + "!"); //should say "grid area 2!"
 
 
 
