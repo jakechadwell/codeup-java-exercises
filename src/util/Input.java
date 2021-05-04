@@ -12,14 +12,13 @@ public class Input {
         String input = scanner.next();
         return input.equalsIgnoreCase("y")||input.equalsIgnoreCase("yes");
     }
-    public int getInt(int min, int max){
-        System.out.printf("Enter an integer between %d and %d: ", min, max);
+    public int getInt(int min, int max, String prompt){
         int userInput = scanner.nextInt();
         if (min <= userInput && userInput <= max) {
             return userInput;
         } else {
             System.out.println("Sorry, that number is not in the specified range, try again: ");
-            return getInt(min, max);
+            return getInt(min, max, prompt);
         }
     }
     public int getInt(){
