@@ -13,30 +13,53 @@ public class Input {
         return input.equalsIgnoreCase("y")||input.equalsIgnoreCase("yes");
     }
     public int getInt(int min, int max, String prompt){
-        int userInput = scanner.nextInt();
-        if (min <= userInput && userInput <= max) {
-            return userInput;
+        String userInput = this.getString(prompt);
+        int userInteger;
+        try {
+            userInteger = Integer.valueOf(userInput);
+        }catch (NumberFormatException e) {
+            System.err.println("Not an integer within range.");
+            return getInt(min, max, prompt);
+        }
+        if (min <= userInteger && userInteger <= max) {
+            return userInteger;
         } else {
             System.out.println("Sorry, that number is not in the specified range, try again: ");
             return getInt(min, max, prompt);
         }
     }
-    public int getInt(){
-        System.out.println("Enter a number: ");
-        return this.scanner.nextInt();
+    public int getInt(String prompt){
+        try {
+            String userInput = this.getString(prompt);
+            return Integer.valueOf(userInput);
+        } catch (NumberFormatException e) {
+            System.err.println("That is not an integer");
+            return getInt(prompt);
+        }
     }
-    public double getDouble(double min, double max){
-        System.out.printf("Enter a double between %s and %s: ", min, max);
-        double userInput = scanner.nextDouble();
-        if (min <= userInput && userInput <= max) {
-            return userInput;
+    public double getDouble(double min, double max, String prompt){
+        String userInput = this.getString(prompt);
+        double userDouble;
+        try{
+            userDouble = Double.valueOf(userInput);
+        }catch(NumberFormatException e){
+            System.err.println("Not in valid range.");
+            return getDouble(min, max, prompt);
+        }
+        if (min <= userDouble && userDouble <= max) {
+            return userDouble;
         } else {
             System.out.println("Sorry, that double is not in the specified range, try again: ");
-            return getDouble(min, max);
+            return getDouble(min, max, prompt);
         }
     }
     public double getDouble(String prompt){
-        System.out.println(prompt);
-        return this.scanner.nextDouble();
+        try{
+            String userInput = this.getString(prompt);
+            return Double.valueOf(userInput);
+        }catch(NumberFormatException e){
+            System.err.println("Not a double.");
+            return getDouble(prompt);
+        }
     }
 }
