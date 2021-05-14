@@ -32,8 +32,6 @@ public class GradesApplication {
         students.put("drew-walsh", andrew);
         students.put("shovel-dude77", brandon);
 
-        Boolean cont = true;
-
         do {
             System.out.println("Welcome!");
             System.out.println();
